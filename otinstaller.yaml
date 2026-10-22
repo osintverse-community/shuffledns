@@ -20,7 +20,7 @@ outputs:
 runtime:
   kind: docker
   # Filled in by the release workflow with the pushed image's digest.
-  image: ghcr.io/osintverse-community/shuffledns@sha256:0000000000000000000000000000000000000000000000000000000000000000
+  image: ghcr.io/osintverse-community/shuffledns@sha256:a37b179f8549ef7d033c80c57f4af06490a5c30a9b5cbff8078553fcb9f79a12
   platforms: [linux/amd64, linux/arm64]
   command: ["shuffledns", "-d", "{domain}", "-mode", "bruteforce", "-w", "/opt/shuffledns/wordlist.txt", "-r", "/opt/shuffledns/resolvers.txt", "-t", "200", "-directory", "/tmp", "-silent", "-j", "-duc", "-nc"]
   output_format: jsonl
